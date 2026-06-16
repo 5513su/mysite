@@ -16,7 +16,9 @@
         body {
             margin: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-            background: #05060b;
+            background: #7b85b6;
+            background: linear-gradient(rgba(253, 16, 166, 0.5),rgba(29, 57, 239, 0.5));
+            background: linear-gradient(rgb(246, 13, 203),rgb(189, 227, 228));
             color: #f7f7f7;
             line-height: 1.7;
         }
@@ -315,6 +317,95 @@
             margin-top: 10px;
         }
 
+        .cast-song-intro {
+            margin: 34px 0 16px;
+            max-width: 720px;
+            color: #e7e4d8;
+            font-size: 13px;
+        }
+
+        .cast-song-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .cast-song-card {
+            position: relative;
+            min-height: 132px;
+            padding: 16px 16px 15px;
+            border: 1px solid rgba(255,255,255,0.13);
+            border-radius: 8px;
+            background:
+                linear-gradient(135deg, rgba(255,213,79,0.14), rgba(5,6,11,0.15) 38%),
+                rgba(5,6,11,0.54);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+            overflow: hidden;
+        }
+
+        .cast-song-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to bottom, #ffd54f, #ff8a65);
+            opacity: .85;
+        }
+
+        .cast-song-role {
+            display: block;
+            margin-bottom: 8px;
+            color: #b0bec5;
+            font-size: 10px;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+        }
+
+        .cast-song-name {
+            margin: 0 0 8px;
+            color: #fff8e1;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: .08em;
+        }
+
+        .cast-song-label {
+            color: #b0bec5;
+            font-size: 11px;
+            letter-spacing: .16em;
+        }
+
+        .cast-song-title {
+            margin: 2px 0 12px;
+            color: #f7f7f7;
+            font-size: 13px;
+        }
+
+        .cast-song-card a {
+            display: inline-flex;
+            align-items: center;
+            color: #ffd54f;
+            font-size: 12px;
+            letter-spacing: .08em;
+        }
+
+        .cast-song-card a::after {
+            content: "→";
+            margin-left: 6px;
+            transition: transform .2s ease;
+        }
+
+        .cast-song-card a:hover {
+            text-decoration: none;
+        }
+
+        .cast-song-card a:hover::after {
+            transform: translateX(3px);
+        }
+
         /* Trailer / Music / Theater */
         .video-frame {
             position: relative;
@@ -453,7 +544,7 @@
     <div class="hero-inner">
         <!-- 大きなポスター画像 -->
         <aside class="hero-poster" aria-label="映画ポスタービジュアル">
-            <img src="poster_uraharakju1995.png"
+            <img src="movie-web.jpg"
                  alt="映画『1995年あの頃、裏原宿で』ポスタービジュアル">
         </aside>
 
@@ -612,6 +703,108 @@
         <p class="credit-note">
             ※キャスト表記は五十音順・敬称略です。
         </p>
+
+        <div class="cast-song-intro">
+            <div class="section-label">CAST PLAYLIST</div>
+            <p>
+                出演者たちが選んだ「好きな歌」。劇中に流れるカセットテープの曲順をめくるように、
+                それぞれの選曲ページへ移動できます。
+            </p>
+        </div>
+
+        <div class="cast-song-grid" aria-label="出演者の好きな歌リンク集">
+            <article class="cast-song-card">
+                <span class="cast-song-role">CAST</span>
+                <h3 class="cast-song-name">高橋</h3>
+                <div class="cast-song-label">好きな歌</div>
+                <p class="cast-song-title">Fishmans</p>
+                <a href="https://yt-takahashi00.github.io/mysite/" target="_blank" rel="noopener">選曲ページを見る</a>
+            </article>
+            <article class="cast-song-card">
+                <span class="cast-song-role">CAST</span>
+                <h3 class="cast-song-name">真力田</h3>
+                <div class="cast-song-label">好きな歌</div>
+                <p class="cast-song-title">宇多田ヒカル</p>
+                <a href="https://naomimakata.github.io/mysite/" target="_blank" rel="noopener">選曲ページを見る</a>
+            </article>
+            <article class="cast-song-card">
+                <span class="cast-song-role">CAST</span>
+                <h3 class="cast-song-name">小川</h3>
+                <div class="cast-song-label">好きな歌</div>
+                <p class="cast-song-title">禁断の多数決</p>
+                <a href="https://ogawahi.github.io/mysite/" target="_blank" rel="noopener">選曲ページを見る</a>
+            </article>
+            <article class="cast-song-card">
+                <span class="cast-song-role">CAST</span>
+                <h3 class="cast-song-name">高松</h3>
+                <div class="cast-song-label">好きな歌</div>
+                <p class="cast-song-title">宇多田ヒカル</p>
+                <a href="https://naho19810523-beep.github.io/mysite/mysong.html" target="_blank" rel="noopener">選曲ページを見る</a>
+            </article>
+            <article class="cast-song-card">
+                <span class="cast-song-role">CAST</span>
+                <h3 class="cast-song-name">窪田</h3>
+                <div class="cast-song-label">好きな歌</div>
+                <p class="cast-song-title">175R</p>
+                <a href="https://khmaa-ops.github.io/mysite/" target="_blank" rel="noopener">選曲ページを見る</a>
+            </article>
+            <article class="cast-song-card">
+                <span class="cast-song-role">CAST</span>
+                <h3 class="cast-song-name">村下</h3>
+                <div class="cast-song-label">好きな歌</div>
+                <p class="cast-song-title">YUKI</p>
+                <a href="https://aya7mido.github.io/mysite/" target="_blank" rel="noopener">選曲ページを見る</a>
+            </article>
+            <article class="cast-song-card">
+                <span class="cast-song-role">CAST</span>
+                <h3 class="cast-song-name">松田</h3>
+                <div class="cast-song-label">好きな歌</div>
+                <p class="cast-song-title">斉藤壮馬</p>
+                <a href="https://taro675.github.io/mysite/" target="_blank" rel="noopener">選曲ページを見る</a>
+            </article>
+            <article class="cast-song-card">
+                <span class="cast-song-role">CAST</span>
+                <h3 class="cast-song-name">富和</h3>
+                <div class="cast-song-label">好きな歌</div>
+                <p class="cast-song-title">THE ALFEE</p>
+                <a href="https://j-fuwa.github.io/mysite/" target="_blank" rel="noopener">選曲ページを見る</a>
+            </article>
+            <article class="cast-song-card">
+                <span class="cast-song-role">CAST</span>
+                <h3 class="cast-song-name">新田</h3>
+                <div class="cast-song-label">好きな歌</div>
+                <p class="cast-song-title">アンジェラ・アキ</p>
+                <a href="https://aya421xx.github.io/mysite/" target="_blank" rel="noopener">選曲ページを見る</a>
+            </article>
+            <article class="cast-song-card">
+                <span class="cast-song-role">CAST</span>
+                <h3 class="cast-song-name">追谷</h3>
+                <div class="cast-song-label">好きな歌</div>
+                <p class="cast-song-title">いきものがかり</p>
+                <a href="https://rutoonsam-01.github.io/mysite/" target="_blank" rel="noopener">選曲ページを見る</a>
+            </article>
+            <article class="cast-song-card">
+                <span class="cast-song-role">CAST</span>
+                <h3 class="cast-song-name">村岡</h3>
+                <div class="cast-song-label">好きな歌</div>
+                <p class="cast-song-title">竹内まりや</p>
+                <a href="https://atsuko260602-art.github.io/mysite/" target="_blank" rel="noopener">選曲ページを見る</a>
+            </article>
+            <article class="cast-song-card">
+                <span class="cast-song-role">CAST</span>
+                <h3 class="cast-song-name">皆川</h3>
+                <div class="cast-song-label">好きな歌</div>
+                <p class="cast-song-title">絢香</p>
+                <a href="https://tminakawa6081-web.github.io/mysong/" target="_blank" rel="noopener">選曲ページを見る</a>
+            </article>
+            <article class="cast-song-card">
+                <span class="cast-song-role">CAST</span>
+                <h3 class="cast-song-name">高杉</h3>
+                <div class="cast-song-label">好きな歌</div>
+                <p class="cast-song-title">SEKAINOOWARI</p>
+                <a href="https://gaoshanjieya-cmyk.github.io/mysite/" target="_blank" rel="noopener">選曲ページを見る</a>
+            </article>
+        </div>
     </section>
 
     <!-- STAFF -->
