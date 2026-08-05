@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="富山の神通川を舞台に、鮎の友釣りの魅力と釣り方を紹介する動きのあるWebページです。">
+  <title>私の好きな鮎釣り｜鮎と神通川</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="preloader" aria-hidden="true">
+    <div class="loader-fish"><span></span><i></i></div>
+    <p>神通川へ、ようこそ。</p>
+  </div>
+
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header" id="top">
+    <a class="brand magnetic" href="#top" aria-label="ページ上部へ">
+      <span class="brand-mark">鮎</span>
+      <span class="brand-text">AYU &amp; JINZŪ<br><small>私の好きな鮎釣り</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="global-nav" aria-label="メインメニュー">
+      <a href="#魅力">友釣りの魅力</a>
+      <a href="#釣り方">釣り方</a>
+      <a href="#道具">道具</a>
+      <a href="#神通川">神通川</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <canvas id="waterCanvas" aria-hidden="true"></canvas>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-kana" aria-hidden="true">JINZŪ RIVER / TOYAMA</div>
+      <div class="hero-content">
+        <p class="eyebrow reveal">MY FAVORITE THING</p>
+        <h1 class="hero-title" aria-label="私の好きな鮎釣り">
+          <span class="title-small reveal">私の好きな</span>
+          <span class="title-large reveal delay-1">鮎釣り</span>
+        </h1>
+        <p class="catchcopy reveal delay-2">鮎と神通川</p>
+        <p class="hero-lead reveal delay-3">清流に立ち、流れを読み、鮎と向き合う。<br>一瞬の衝撃と長い余韻が、また川へ私を呼び戻す。</p>
+        <a class="hero-button magnetic reveal delay-4" href="#魅力"><span>魅力を知る</span><b>↓</b></a>
+      </div>
+      <div class="hero-stats" aria-label="鮎釣りの特徴">
+        <div><strong data-count="9">0</strong><span>m級の長竿</span></div>
+        <div><strong data-count="1">0</strong><span>対1の駆け引き</span></div>
+        <div><strong data-count="100">0</strong><span>% 自然体験</span></div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true"><span>SCROLL</span><i></i></div>
+    </section>
+
+    <section class="intro section" id="魅力">
+      <div class="section-number" aria-hidden="true">01</div>
+      <div class="section-heading reveal">
+        <p class="section-kicker">THE CHARM OF TOMOZURI</p>
+        <h2>鮎の友釣りの魅力</h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <div class="intro-grid">
+        <div class="intro-copy reveal">
+          <p class="lead-ja">友釣りは、鮎の<span>縄張り意識</span>を利用する、日本独自の伝統的な釣法です。</p>
+          <p>オトリ鮎を自然な流れへ送り込み、縄張りを守る野鮎が体当たりした瞬間に掛けます。目に見えない水中の動きを想像しながら、竿先と糸から伝わる小さな変化を読み取る。静けさの中に、強烈な駆け引きがあります。</p>
+          <p>川の流れ、石の形、水温、鮎の動き。毎日変わる自然を相手にするから、同じ一日は二度とありません。</p>
+        </div>
+
+        <figure class="fish-card tilt-card reveal delay-1">
+          <div class="image-window">
+            <img src="images/sub.jpg" alt="清流の水面に横たわる美しい鮎の魚体">
+            <span class="shine"></span>
+          </div>
+          <figcaption>
+            <span>天然の造形美</span>
+            <strong>香魚・鮎</strong>
+            <small>清らかな流れに磨かれた、黄金色の魚体。</small>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="charm-cards">
+        <article class="charm-card reveal" data-ripple>
+          <span class="card-no">01</span><i class="icon icon-river"></i>
+          <h3>自然との一体感</h3>
+          <p>腰まで清流に入り、足元の石と水圧を感じながら川の一部になる時間。</p>
+        </article>
+        <article class="charm-card reveal delay-1" data-ripple>
+          <span class="card-no">02</span><i class="icon icon-fish"></i>
+          <h3>鮎との駆け引き</h3>
+          <p>流れの筋を読み、オトリの動きを操り、野鮎との一瞬の勝負を待つ。</p>
+        </article>
+        <article class="charm-card reveal delay-2" data-ripple>
+          <span class="card-no">03</span><i class="icon icon-rod"></i>
+          <h3>繊細で奥深い技術</h3>
+          <p>竿、糸、オトリを一体にする操作。小さな工夫が釣果を大きく変える。</p>
+        </article>
+        <article class="charm-card reveal delay-3" data-ripple>
+          <span class="card-no">04</span><i class="icon icon-spark"></i>
+          <h3>忘れられない衝撃</h3>
+          <p>竿が満月のように曲がり、掛かった鮎が水面を割る瞬間の高揚感。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="method section" id="釣り方">
+      <div class="flow-lines" aria-hidden="true"></div>
+      <div class="section-number" aria-hidden="true">02</div>
+      <div class="section-heading light reveal">
+        <p class="section-kicker">HOW TO FISH</p>
+        <h2>友釣りの基本</h2>
+        <div class="gold-line"></div>
+        <p>「流れを見る」「オトリを自然に泳がせる」「掛かる瞬間を待つ」。<br>友釣りは、力よりも観察と丁寧な操作が大切です。</p>
+      </div>
+
+      <div class="method-layout">
+        <div class="method-tabs reveal" role="tablist" aria-label="友釣りの手順">
+          <button class="method-tab active" role="tab" aria-selected="true" data-step="0"><b>01</b><span>ポイントを読む</span></button>
+          <button class="method-tab" role="tab" aria-selected="false" data-step="1"><b>02</b><span>オトリを準備</span></button>
+          <button class="method-tab" role="tab" aria-selected="false" data-step="2"><b>03</b><span>流れへ送る</span></button>
+          <button class="method-tab" role="tab" aria-selected="false" data-step="3"><b>04</b><span>アタリを待つ</span></button>
+          <button class="method-tab" role="tab" aria-selected="false" data-step="4"><b>05</b><span>取り込む</span></button>
+        </div>
+
+        <div class="method-stage reveal delay-1">
+          <div class="stage-current"><span></span><span></span><span></span></div>
+          <div class="float-animation" aria-hidden="true"><i></i><b></b></div>
+          <div class="stage-text" aria-live="polite">
+            <p class="step-label">STEP <span id="stepNumber">01</span></p>
+            <h3 id="stepTitle">ポイントを読む</h3>
+            <p id="stepBody">鮎が縄張りを持ちやすい石の周辺、流れの筋、白く磨かれた石などを観察します。安全に立てる場所を選ぶことも大切です。</p>
+            <div class="step-tip"><span>POINT</span><p id="stepTip">最初は流れが強すぎず、足場の安定した場所から始めます。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gear section" id="道具">
+      <div class="section-number" aria-hidden="true">03</div>
+      <div class="section-heading reveal">
+        <p class="section-kicker">ESSENTIAL GEAR</p>
+        <h2>川と鮎を感じる道具</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="gear-orbit reveal">
+        <div class="orbit-line one"></div><div class="orbit-line two"></div>
+        <div class="gear-center"><span>AYU</span><b>友釣り</b><small>GEAR</small></div>
+        <article class="gear-item item-1"><i>竿</i><h3>鮎竿</h3><p>長さを活かしてオトリを繊細に操作する。</p></article>
+        <article class="gear-item item-2"><i>糸</i><h3>仕掛け</h3><p>水中糸、鼻カン、掛け針をバランスよく組む。</p></article>
+        <article class="gear-item item-3"><i>網</i><h3>タモ</h3><p>掛かった鮎を受け止め、素早く交換する。</p></article>
+        <article class="gear-item item-4"><i>装</i><h3>安全装備</h3><p>鮎タイツ、シューズ、ベルト、救命具を備える。</p></article>
+      </div>
+    </section>
+
+    <section class="river" id="神通川">
+      <div class="river-parallax" aria-hidden="true"></div>
+      <div class="river-overlay"></div>
+      <div class="river-content reveal">
+        <p class="section-kicker">JINZŪ RIVER, TOYAMA</p>
+        <h2>鮎と神通川</h2>
+        <p>富山の街を流れる神通川。広い空、立山連峰から届く水、瀬を走る白い流れ。<br>都市の近くにありながら、川へ一歩入れば、そこには鮎と向き合う濃密な時間があります。</p>
+        <div class="river-facts">
+          <span><b data-count="360">0</b><small>°の自然</small></span>
+          <span><b data-count="1">0</b><small>尾との出会い</small></span>
+          <span><b data-count="0">0</b><small>同じ日はない</small></span>
+        </div>
+      </div>
+      <div class="river-word" aria-hidden="true">JINZŪ</div>
+    </section>
+
+    <section class="safety section">
+      <div class="safety-box reveal">
+        <span class="safety-mark">!</span>
+        <div>
+          <p class="section-kicker">SAFETY FIRST</p>
+          <h2>川を楽しむために</h2>
+          <p>入川前に天候・水位・遊漁規則を確認し、必要な遊漁券を準備します。滑りにくい装備と救命具を使用し、増水時や無理な渡河は避けましょう。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-ripple" aria-hidden="true"></div>
+    <p class="footer-copy">鮎とともに、自然とともに。<br><strong>最高の一瞬を求めて。</strong></p>
+    <p class="footer-small">MY FAVORITE AYU FISHING / JINZŪ RIVER</p>
+    <a class="to-top magnetic" href="#top" aria-label="ページ上部へ戻る">↑</a>
+  </footer>
+
+  <script>
+  (() => {
+    'use strict';
+
+    const $ = (s, p = document) => p.querySelector(s);
+    const $$ = (s, p = document) => [...p.querySelectorAll(s)];
+
+    // Preloader
+    window.addEventListener('load', () => {
+      setTimeout(() => document.body.classList.add('loaded'), 450);
+    });
+
+    // Custom cursor
+    const dot = $('.cursor-dot');
+    const ring = $('.cursor-ring');
+    let mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
+    window.addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; dot.style.transform = `translate(${mx}px,${my}px)`; });
+    const cursorLoop = () => {
+      rx += (mx - rx) * .16; ry += (my - ry) * .16;
+      ring.style.transform = `translate(${rx}px,${ry}px)`;
+      requestAnimationFrame(cursorLoop);
+    };
+    cursorLoop();
+    $$('a, button, [data-ripple], .tilt-card').forEach(el => {
+      el.addEventListener('pointerenter', () => document.body.classList.add('cursor-hover'));
+      el.addEventListener('pointerleave', () => document.body.classList.remove('cursor-hover'));
+    });
+
+    // Header, progress, parallax
+    const header = $('.site-header');
+    const progress = $('.scroll-progress span');
+    const heroBg = $('.hero-bg');
+    const riverBg = $('.river-parallax');
+    const navLinks = $$('.global-nav a');
+    const sections = $$('main section[id]');
+    const onScroll = () => {
+      const y = scrollY;
+      header.classList.toggle('scrolled', y > 45);
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = `${max ? (y / max) * 100 : 0}%`;
+      heroBg.style.transform = `translate3d(0, ${y * .16}px, 0) scale(1.05)`;
+      if (riverBg) {
+        const rect = riverBg.parentElement.getBoundingClientRect();
+        riverBg.style.transform = `translate3d(0, ${-rect.top * .09}px, 0) scale(1.12)`;
+      }
+      let current = '';
+      sections.forEach(sec => { if (sec.getBoundingClientRect().top < innerHeight * .42) current = sec.id; });
+      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${current}`));
+    };
+    addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+    // Mobile nav
+    const toggle = $('.menu-toggle');
+    const nav = $('.global-nav');
+    toggle.addEventListener('click', () => {
+      const open = document.body.classList.toggle('menu-open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    navLinks.forEach(a => a.addEventListener('click', () => { document.body.classList.remove('menu-open'); toggle.setAttribute('aria-expanded','false'); }));
+
+    // Reveal and counters
+    const animateCount = el => {
+      if (el.dataset.done) return;
+      el.dataset.done = '1';
+      const target = Number(el.dataset.count);
+      const start = performance.now();
+      const duration = 1150;
+      const tick = now => {
+        const p = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased);
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      $$('[data-count]', entry.target).forEach(animateCount);
+      if (entry.target.matches('[data-count]')) animateCount(entry.target);
+    }), { threshold: .16 });
+    $$('.reveal, .hero-stats, .river-facts').forEach(el => observer.observe(el));
+
+    // Interactive steps
+    const steps = [
+      { title:'ポイントを読む', body:'鮎が縄張りを持ちやすい石の周辺、流れの筋、白く磨かれた石などを観察します。安全に立てる場所を選ぶことも大切です。', tip:'最初は流れが強すぎず、足場の安定した場所から始めます。' },
+      { title:'オトリを準備する', body:'オトリ鮎を弱らせないよう水中で扱い、鼻カンと逆バリを丁寧にセットします。仕掛けが絡んでいないか確認します。', tip:'オトリを手で強く握らず、濡らした手でやさしく扱います。' },
+      { title:'流れへ送り込む', body:'竿の角度と糸の張りを調整し、オトリが自分で泳いでいるようにポイントへ導きます。引きすぎず、自然な姿勢を保ちます。', tip:'オトリの位置を想像し、竿先を小さく動かして流れになじませます。' },
+      { title:'アタリを待つ', body:'野鮎がオトリへ体当たりすると、手元や竿全体に鋭い衝撃が伝わります。慌てず竿を立て、掛かり鮎を流れから浮かせます。', tip:'小さな変化も見逃さず、糸の角度とオトリの動きを観察します。' },
+      { title:'タモへ取り込む', body:'竿の弾力を使い、オトリと掛かり鮎を水面から抜き上げてタモで受けます。掛かった鮎を次のオトリにすると循環が生まれます。', tip:'周囲を確認し、無理に抜かず、竿の力を使って落ち着いて取り込みます。' }
+    ];
+    const tabs = $$('.method-tab');
+    tabs.forEach((tab, i) => tab.addEventListener('click', () => {
+      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+      tab.classList.add('active'); tab.setAttribute('aria-selected','true');
+      const stage = $('.method-stage'); stage.classList.remove('step-change'); void stage.offsetWidth; stage.classList.add('step-change');
+      $('#stepNumber').textContent = String(i + 1).padStart(2,'0');
+      $('#stepTitle').textContent = steps[i].title;
+      $('#stepBody').textContent = steps[i].body;
+      $('#stepTip').textContent = steps[i].tip;
+    }));
+
+    // 3D tilt
+    $$('.tilt-card').forEach(card => {
+      card.addEventListener('pointermove', e => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - .5;
+        const y = (e.clientY - r.top) / r.height - .5;
+        card.style.transform = `perspective(1100px) rotateY(${x*8}deg) rotateX(${-y*7}deg) translateY(-4px)`;
+      });
+      card.addEventListener('pointerleave', () => card.style.transform = '');
+    });
+
+    // Ripple effect
+    $$('[data-ripple]').forEach(el => el.addEventListener('pointerdown', e => {
+      const r = el.getBoundingClientRect(); const ripple = document.createElement('span');
+      ripple.className = 'click-ripple'; ripple.style.left = `${e.clientX-r.left}px`; ripple.style.top = `${e.clientY-r.top}px`;
+      el.appendChild(ripple); setTimeout(() => ripple.remove(), 700);
+    }));
+
+    // Magnetic buttons
+    $$('.magnetic').forEach(el => {
+      el.addEventListener('pointermove', e => {
+        const r = el.getBoundingClientRect();
+        el.style.transform = `translate(${(e.clientX-r.left-r.width/2)*.08}px, ${(e.clientY-r.top-r.height/2)*.12}px)`;
+      });
+      el.addEventListener('pointerleave', () => el.style.transform = '');
+    });
+
+    // Water particles canvas
+    const canvas = $('#waterCanvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    const resizeCanvas = () => {
+      const dpr = Math.min(devicePixelRatio || 1, 2);
+      canvas.width = innerWidth*dpr; canvas.height = innerHeight*dpr;
+      canvas.style.width = innerWidth+'px'; canvas.style.height = innerHeight+'px';
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+      particles = Array.from({length: Math.min(85, Math.floor(innerWidth/16))}, () => ({
+        x: Math.random()*innerWidth, y: Math.random()*innerHeight,
+        r: Math.random()*2.2+.3, vx: Math.random()*.25+.04, vy: -(Math.random()*.6+.12),
+        a: Math.random()*.45+.08
+      }));
+    };
+    const drawWater = () => {
+      ctx.clearRect(0,0,innerWidth,innerHeight);
+      particles.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.y < -10 || p.x > innerWidth+10) { p.x = Math.random()*innerWidth; p.y = innerHeight+10; }
+        ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fillStyle = `rgba(210,240,255,${p.a})`; ctx.fill();
+      });
+      requestAnimationFrame(drawWater);
+    };
+    resizeCanvas(); drawWater(); addEventListener('resize', resizeCanvas);
+
+    // Smooth anchor scrolling
+    $$('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+      const target = $(a.getAttribute('href')); if (!target) return;
+      e.preventDefault(); target.scrollIntoView({ behavior:'smooth', block:'start' });
+    }));
+  })();
+  </script>
+</body>
+</html>
